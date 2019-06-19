@@ -1,1 +1,1 @@
-# Indy-hub
+# IndyHub
