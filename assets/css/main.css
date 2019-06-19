@@ -2174,15 +2174,16 @@ input, select, textarea {
 
 /* Header */
 
+
 	#header {
 		position: relative;
-		background-image: url("../../images/header.jpg");
+		background-image: url("../../images/main5.jpg");
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
 		color: #fff;
 		text-align: center;
-		padding: 7.5em 0 2em 0;
+		padding: 8.5em 0 2em 0;
 		cursor: default;
 	}
 
