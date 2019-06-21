@@ -1,10 +1,11 @@
 <?php
-
 $host = "localhost";
 $db_username = "root";
 $db_password = "root";
 $db_name = "IndyHub_Users";
 
+$first_name = htmlspecialchars($_POST['first_name']);
+$last_name = htmlspecialchars($_POST['last_name']);
 $username = htmlspecialchars($_POST['username']);
 $password = htmlspecialchars($_POST['password']);
 
@@ -16,22 +17,20 @@ $password = htmlspecialchars($_POST['password']);
       if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
       } 
+      // Connected, execute queries
       else {
-        // Connected, execute queries
-        $sql = "SELECT username FROM `users` WHERE username='$username'";
-        $result = $conn->query($sql);
-        if($result->num_rows == 0) {
-          echo "That username is not registered!";
-        } 
+        $sql = "INSERT INTO `users` (`first_name`, `last_name`, `username`, `password`, `date`) VALUES ('$first_name', '$last_name', '$username', '$password', CURRENT_TIMESTAMP);";
+
+        if ($conn->query($sql)) {
+          echo "Thank you for registering! We'll be in touch shortly.";
+        }
         else {
-            $sql = "SELECT username FROM `users` WHERE username='$username' AND password='$password'";
-            $result = $conn->query($sql);
-            if($result->num_rows == 0) {
-              echo "That password is incorrect!";
-            }
-            else {
-              echo "Login successful, welcome to IndyHub!";
-            }
+          if ($conn->errno == 1062) {
+            echo "Sorry, that username is already taken! Please choose another username."; 
+          } 
+          else {
+            echo "Error: " . $sql . "<br>". $conn->error . "<br>". $conn->errno;
+          }
         }
         $conn->close();
       }
