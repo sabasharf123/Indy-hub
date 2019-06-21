@@ -16,14 +16,14 @@
 						<header>
 							<h1><a href="index.html" id="logo">IndyHub</a></h1>
 							<hr/>
-							<p>Sign Up. It's Free.</p>
-              <form id="login" action="login.php" class="form" method="post" enctype='multipart/form-data'/>
+							<p>Register Now!</p>
+              <form id="login" action="signup.php" class="form" method="post" enctype='multipart/form-data'/>
                 <fieldset>
                   <div>
-                    First name: <input type="text" name="firstname"/>
+                    First Name: <input type="text" name="first_name"/>
                   </div>
                   <div>
-                    Last name: <input type="text" name="lastname"/>
+                    Last Name: <input type="text" name="last_name"/>
                   </div>
                   <div>
                     Username: <input type="text" name="username"/>
@@ -31,12 +31,13 @@
                   <div>
                     Password:<input type="password" name="password"/>
                   </div>
-                  <div>
-                    <input type="submit" value="Login" class="button"/></div
-                  <span><?php echo $userpass_err; ?></span>
+                  <div>  <div>
+                    Email:<input type="text" name="email"/>
+                  </div>
+                    <input type="submit" value="Register" class="button"/></div
                 </fieldset>
-              <form> </form>
-							<br> </br>
+              </form>
+							</br>
 						</header>
 					</div> <!--end of inner class-->
 			</div> <!--end of header-->

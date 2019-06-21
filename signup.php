@@ -7,6 +7,7 @@ $db_name = "IndyHub_Users";
 $first_name = htmlspecialchars($_POST['first_name']);
 $last_name = htmlspecialchars($_POST['last_name']);
 $username = htmlspecialchars($_POST['username']);
+$email = htmlspecialchars($_POST['email']);
 $password = htmlspecialchars($_POST['password']);
 
   if (!empty($username)){
@@ -19,7 +20,7 @@ $password = htmlspecialchars($_POST['password']);
       } 
       // Connected, execute queries
       else {
-        $sql = "INSERT INTO `users` (`first_name`, `last_name`, `username`, `password`, `date`) VALUES ('$first_name', '$last_name', '$username', '$password', CURRENT_TIMESTAMP);";
+        $sql = "INSERT INTO `users` (`first_name`, `last_name`, `username`, `password`, `date`, `email`) VALUES ('$first_name', '$last_name', '$username', '$password', CURRENT_TIMESTAMP, '$email');";
 
         if ($conn->query($sql)) {
           echo "Thank you for registering! We'll be in touch shortly.";
