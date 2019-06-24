@@ -17,18 +17,19 @@ $password = htmlspecialchars($_POST['password']);
       // Check connection
       if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
-      } 
+      }
       // Connected, execute queries
       else {
         $sql = "INSERT INTO `users` (`first_name`, `last_name`, `username`, `password`, `date`, `email`) VALUES ('$first_name', '$last_name', '$username', '$password', CURRENT_TIMESTAMP, '$email');";
 
         if ($conn->query($sql)) {
           echo "Thank you for registering! We'll be in touch shortly.";
+          header("Location: registration-success.html");
         }
         else {
           if ($conn->errno == 1062) {
-            echo "Sorry, that username is already taken! Please choose another username."; 
-          } 
+            echo "Sorry, that username is already taken! Please choose another username.";
+          }
           else {
             echo "Error: " . $sql . "<br>". $conn->error . "<br>". $conn->errno;
           }

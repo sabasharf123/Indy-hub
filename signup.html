@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/signup.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="homepage is-preload">
@@ -12,7 +13,7 @@
 			<!-- Header -->
 			<div id="header">
 					<!-- Inner -->
-					<div class="inner" style="margin: 20px; width: 700px">
+					<div class="inner" style="margin: 20px; width: 700px; position:relative;top: -125px;">
 						<header>
 							<h1><a href="index.html" id="logo">IndyHub</a></h1>
 							<hr/>
@@ -20,24 +21,25 @@
               <form id="login" action="signup.php" class="form" method="post" enctype='multipart/form-data'/>
                 <fieldset>
                   <div>
-                    First Name: <input type="text" name="first_name"/>
+                    First Name: <input class="signup-input" type="text" name="first_name"/>
                   </div>
                   <div>
-                    Last Name: <input type="text" name="last_name"/>
+                    Last Name: <input class="signup-input" type="text" name="last_name"/>
                   </div>
                   <div>
-                    Username: <input type="text" name="username"/>
+                    Username: <input class="signup-input" type="text" name="username"/>
                   </div>
                   <div>
-                    Password:<input type="password" name="password"/>
+                    Password:<input class="signup-input" type="password" name="password"/>
                   </div>
-                  <div>  <div>
-                    Email:<input type="text" name="email"/>
+                  <div>
+                    Email:<input class="signup-input" type="text" name="email"/>
                   </div>
-                    <input type="submit" value="Register" class="button"/></div
                 </fieldset>
               </form>
 							</br>
+							<input type="submit" value="Register" class="button"/>
+
 						</header>
 					</div> <!--end of inner class-->
 			</div> <!--end of header-->
