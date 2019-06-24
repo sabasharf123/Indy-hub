@@ -1,4 +1,3 @@
-
 <?php
 if (isset($_POST['username']) && isset($_POST['password'])) {
   $host = "localhost";
@@ -16,14 +15,14 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
       // Check connection
       if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
-      } 
+      }
       else {
         // Connected, execute queries
         $sql = "SELECT username FROM `users` WHERE username='$username'";
         $result = $conn->query($sql);
         if($result->num_rows == 0) {
           echo "That username is not registered!";
-        } 
+        }
         else {
             $sql = "SELECT username FROM `users` WHERE username='$username' AND password='$password'";
             $result = $conn->query($sql);
@@ -101,4 +100,3 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
   </body>
 </html>
-
