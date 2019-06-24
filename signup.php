@@ -24,7 +24,7 @@ $password = htmlspecialchars($_POST['password']);
 
         if ($conn->query($sql)) {
           echo "Thank you for registering! We'll be in touch shortly.";
-          header("Location: registration-success.html");
+          //header("Location: registration-success.html");
         }
         else {
           if ($conn->errno == 1062) {
