@@ -1,0 +1,48 @@
+.container {
+  font-family: 'Yrsa', Times New Roman, serif;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+  grid-gap: 10px;
+  background: #96B5C1;
+}
+.effect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1em;
+  cursor: pointer;
+}
+.effect__heading {
+  font-size: 1.5em;
+  line-height: 1.2;
+  position: relative;
+  z-index: 2;
+}
+.effect__heading:after {
+  content: '';
+  position: absolute;
+}
+.effect__subheading {
+  font-family: 'Hindi', Avenir, sans-serif;
+  font-size: 1.2em;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+
+.effect-a .effect__heading:after {
+  bottom: 2px;
+  left: 0;
+  height: 10px;
+  width: 100%;
+  background: #000;
+  z-index: -1;
+  transform-origin: 0% 50%;
+  transform: scaleX(0);
+}
+.effect-a .effect__subheading {
+  transform: translateX(-50%);
+}
