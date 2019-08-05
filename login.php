@@ -1,10 +1,21 @@
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143101716-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-143101716-2');
+</script>
+
+
 <?php
 session_start();
 
 $host = "localhost";
-$db_username = "root";
-$db_password = "root";
-$db_name = "IndyHub_Users";
+$db_username = "sabasharf";
+$db_password = "Iloveatif1";
+$db_name = "IndyHub";
 
 $username = htmlspecialchars($_POST['username']);
 $password = htmlspecialchars($_POST['password']);

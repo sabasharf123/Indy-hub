@@ -6,6 +6,15 @@
     $first_name = $_SESSION["first_name"];
   ?>
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143101716-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-143101716-2');
+</script>
     <title>IndyHub</title>
     <link rel="icon" href="https://pbs.twimg.com/profile_images/1141121235109027841/qhi-2_U7_400x400.jpg">
     <meta charset="utf-8" />
